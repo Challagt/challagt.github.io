@@ -79,6 +79,24 @@ footer{text-align:center;padding:30px;font-size:12px;color:#888}
 }
 header {
   position: relative;
+  color: #ffffff;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(11, 15, 20, 0.55),
+    rgba(11, 15, 20, 0.75)
+  );
+  pointer-events: none;
+}
+header > * {
+  position: relative;
+  z-index: 1;
+}
+
 }
 
 header > img {
@@ -311,6 +329,7 @@ window.addEventListener('load', runCounters);
 
 </body>
 </html>
+
 
 
 
