@@ -96,11 +96,11 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 80px;
+  height: 160px;
   background: linear-gradient(
     to bottom,
     rgba(11,15,20,0),
-    rgba(11,15,20,0.85)
+    rgba(11,15,20,1)
   );
   pointer-events: none;
 }
@@ -108,13 +108,13 @@ header {
 
 }
 
-header::after {
+header::before {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    rgba(11, 15, 20, 0.40),
-    rgba(11, 15, 20, 0.60)
+    rgba(11, 15, 20, 0.30),
+    rgba(11, 15, 20, 0.30)
   );
   pointer-events: none;
 }
@@ -436,6 +436,7 @@ window.addEventListener('load', runCounters);
 
 </body>
 </html>
+
 
 
 
