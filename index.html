@@ -137,6 +137,34 @@ footer{text-align:center;padding:30px;font-size:12px;color:#888}
   color: #e8f1f8;
   min-height: 260px;
 }
+  /* Rapid Response image wrapper */
+.rapid-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* Dark cinematic overlay */
+.rapid-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0.55)
+  );
+}
+
+/* Image sizing */
+.rapid-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
 
 .rapid-tile h3{
   font-size: 0.95rem;
@@ -488,25 +516,31 @@ header h1 {
 <section class="rapid-response">
   <h2>RAPID RESPONSE</h2>
 
-  <div class="cards">
-    <div class="card rapid-tile">
-      <img src="images/images/rapid-response-operator.jpg" alt="Rapid response operator">
-      <h3>Rapid Response Operator</h3>
-      <p>Highly trained operators ready for immediate deployment.</p>
-    </div>
-
-    <div class="card rapid-tile">
-      <img src="images/images/rapid-response-helecopter.jpg" alt="Rapid response helicopter">
-      <h3>Rapid Response Helicopter</h3>
-      <p>Air insertion and extraction with rapid mobilization.</p>
-    </div>
-
-    <div class="card rapid-tile">
-      <img src="images/images/rapid-response-helecopter-night.jpg" alt="Night helicopter operations">
-      <h3>Night Helicopter Operations</h3>
-      <p>Low-light capability for time-sensitive operations.</p>
-    </div>
+  <div class="card rapid-tile">
+  <div class="rapid-image">
+    <img src="images/images/rapid-response-operator.jpg" alt="Rapid response operator">
   </div>
+  <h3>Rapid Response Operator</h3>
+  <p>Highly trained operators ready for immediate deployment.</p>
+</div>
+
+  <div class="card rapid-tile">
+  <div class="rapid-image">
+    <img src="images/images/rapid-response-helicopter.jpg" alt="Rapid response helicopter">
+  </div>
+  <h3>Rapid Response Helicopter</h3>
+  <p>Air insertion and extraction with rapid mobilization.</p>
+</div>
+
+
+<div class="card rapid-tile">
+  <div class="rapid-image">
+    <img src="images/images/rapid-response-helicopter-night.jpg" alt="Night helicopter operations">
+  </div>
+  <h3>Night Helicopter Operations</h3>
+  <p>Low-light capability for time-sensitive operations.</p>
+</div>
+
 </section>
 
 
@@ -664,6 +698,7 @@ window.addEventListener('load', runCounters);
 
 </body>
 </html>
+
 
 
 
