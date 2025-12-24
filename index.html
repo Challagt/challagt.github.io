@@ -35,12 +35,15 @@ section{max-width:1000px;margin:0 auto;padding:50px 20px;}
   gap: 18px;
 }
 
-/* Rapid Response cards ONLY */
-.rapid-response .cards {
+.rapid-cards{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
+@media (max-width: 900px){
+  .rapid-cards{ grid-template-columns: 1fr; }
+}
+
 
 
 
@@ -538,7 +541,7 @@ header h1 {
 <section class="rapid-response">
   <h2>RAPID RESPONSE</h2>
 
-  <div class="cards rapid-cards">
+  <div class="rapid-cards">
     <div class="card rapid-tile">
       <div class="rapid-image">
         <img src="images/images/rapid-response-operator.jpg" alt="Rapid response operator">
@@ -549,17 +552,17 @@ header h1 {
 
     <div class="card rapid-tile">
       <div class="rapid-image">
-        <img src="images/images/rapid-response-helicopter.jpg" alt="Rapid response helicopter">
+        <img src="images/images/rapid-response-helecopter.jpg" alt="Rapid response helecopter">
       </div>
-      <h3>Rapid Response Helicopter</h3>
+      <h3>Rapid Response Helecopter</h3>
       <p>Air insertion and extraction with rapid mobilization.</p>
     </div>
 
     <div class="card rapid-tile">
       <div class="rapid-image">
-        <img src="images/images/rapid-response-helicopter-night.jpg" alt="Night helicopter operations">
+        <img src="images/images/rapid-response-helecopter-night.jpg" alt="Night helecopter operations">
       </div>
-      <h3>Night Helicopter Operations</h3>
+      <h3>Night Helecopter Operations</h3>
       <p>Low-light capability for time-sensitive operations.</p>
     </div>
   </div>
@@ -721,6 +724,7 @@ window.addEventListener('load', runCounters);
 
 </body>
 </html>
+
 
 
 
