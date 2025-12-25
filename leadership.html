@@ -13,6 +13,45 @@ section{max-width:900px;margin:auto;padding:40px 20px}
 .card{background:var(--panel);padding:20px;border-radius:8px;border:1px solid var(--line);margin-bottom:16px}
 h1{text-transform:uppercase;letter-spacing:2px}
 .subtle{color:var(--muted);font-size:14px;margin-bottom:22px}
+  /* Leadership headshot layout */
+.leader-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.leader-photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 999px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.leader-info {
+  flex: 1;
+}
+
+.leader-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+  opacity: 0.9;
+}
+
+/* Stack vertically on small screens */
+@media (max-width: 700px) {
+  .leader-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .leader-photo {
+    width: 88px;
+    height: 88px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -79,5 +118,6 @@ training, logistics, and global support services.
 </section>
 </body>
 </html>
+
 
 
