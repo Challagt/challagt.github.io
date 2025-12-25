@@ -174,25 +174,26 @@ footer{text-align:center;padding:30px;font-size:12px;color:#888}
     rgba(0,0,0,0.55)
   );
 }
-/* Image sizing – base for ALL rapid response images */
+/* Image sizing */
 .rapid-image img {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  object-position: center 35%; /* this keeps the operator perfect */
   display: block;
 }
 
-/* Day helicopter ONLY – tilt the crop down to show more aircraft */
-.card.heli-day .rapid-image img {
-  object-position: center 80% !important;
+/* Individual crop per Rapid Response image */
+.rapid-image img[src*="rapid-response-operator.jpg"] {
+  object-position: center 35%;
 }
 
-/* Night helicopter ONLY – slightly lower than base */
-.card.heli-night .rapid-image img {
-  object-position: center 60% !important;  /* tweak 55–70% to taste */
+.rapid-image img[src*="rapid-response-helicopter.jpg"] {
+  object-position: center 80%;
 }
 
+.rapid-image img[src*="rapid-response-helicopter-night.jpg"] {
+  object-position: center 60%;
+}
 
 
 
@@ -732,6 +733,7 @@ window.addEventListener('load', runCounters);
 
 </body>
 </html>
+
 
 
 
